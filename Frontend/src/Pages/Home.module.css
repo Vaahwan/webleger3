@@ -1,0 +1,86 @@
+.homeSection {
+  background-size: 100% 100vh;
+  background-position: center center;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 10rem;
+}
+/* #btn:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid white;
+} */
+#inputDiv {
+  display: flex;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  max-width: 300px;
+  width: 80%;
+
+  height: fit-content;
+  padding: 1rem;
+  margin-top: 20%;
+}
+#inputDiv input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  margin-left: 10px;
+  font-size: 1.8rem;
+  width: 100%;
+}
+
+/* Food Container */
+.foodContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding-top: 5%;
+}
+.foodCard {
+  background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  position: relative;
+}
+.foodCard img {
+  width: 100%;
+}
+.title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border-radius: 0 0 8px 0;
+  margin: 0;
+  z-index: 1;
+  background-color: blur(1px);
+  font-weight: 600;
+}
+.foodCard button {
+  position: absolute;
+  bottom: 0;
+  border: none;
+  background-color: red;
+  font-size: 2rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+@media (max-width: 620px) {
+  #inputDiv {
+    margin: 40% auto;
+  }
+  #inputDiv input {
+    font-size: 1.4rem;
+  }
+}

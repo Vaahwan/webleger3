@@ -1,0 +1,99 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 10%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  box-sizing: border-box;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(50px);
+  z-index: -1;
+}
+#logo {
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 800;
+  -webkit-text-stroke: 1px #713fc2;
+  font-family: "Fira Sans Condensed";
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  color: #b41aa6;
+  text-decoration: none;
+  font-weight: 500;
+  gap: 1.5rem;
+}
+
+.menuIcons {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+
+  right: 5%;
+}
+
+.logoutBtn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  background-color: #5d4bcb;
+  border: none;
+}
+.logoutBtn:hover {
+  background-color: #b41aa6;
+  color: white;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+}
+
+.navLink.active {
+  color: #ff0000; /* Desired color for the active NavLink */
+  /* Add other styles for the active NavLink */
+}
+@media (max-width: 992px) {
+  .header {
+    padding: 0.5rem 5%;
+  }
+}
+@media (max-width: 768px) {
+  .menuIcons {
+    display: inline-flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(50px);
+    transition: right 0.3s ease-in-out; /* Add transition for right property */
+  }
+
+  .navOpen {
+    right: 0; /* Slide in from the right when .navOpen class is applied */
+  }
+}
